@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "TankTrouble WASD Control Remapper",
+  "version": "1.0",
+  "description": "Remap TankTrouble WASD control to custom keys",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tanktrouble-wasd-remapper@gentleman.dev"
+    }
+  },
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["*://*.tanktrouble.com/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["inject.js"],
+      "matches": ["*://*.tanktrouble.com/*"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.tanktrouble.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

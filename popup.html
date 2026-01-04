@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: "Tanktrouble", Arial, sans-serif;
+        text-align: center;
+        width: 250px;
+        padding: 10px;
+        background-color: white;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 0px;
+        margin-bottom: 16px;
+      }
+
+      .keyboard {
+        display: grid;
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: repeat(2, 60px);
+        gap: 8px;
+        justify-content: center;
+      }
+
+      .key {
+        height: 60px;
+        width: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #2f3542;
+        border-radius: 6px;
+        font-size: 10px;
+        font-weight: bold;
+        background: #f1f2f6;
+        cursor: pointer;
+      }
+
+      .key span:not(.label) {
+        max-width: 100%;
+        text-align: center;
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
+
+      .label {
+        font-size: 8px;
+        color: #747d8c;
+        margin-top: 2px;
+      }
+
+      .key.active,
+      .key.active span {
+        background: #2ed573;
+        color: white;
+      }
+
+      .key.fire.active,
+      .key.fire.active span {
+        background: #ff4757;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>TankTrouble WASD Control Remapper</p>
+    <div class="keyboard">
+      <div class="key fire" data-action="fire">
+        <span>Q</span>
+        <span class="label">FIRE</span>
+      </div>
+      <div></div>
+      <div class="key" data-action="forward">
+        <span>W</span>
+        <span class="label">FORWARD</span>
+      </div>
+      <div></div>
+      <div></div>
+      <div class="key" data-action="left">
+        <span>A</span>
+        <span class="label">LEFT</span>
+      </div>
+      <div class="key" data-action="back">
+        <span>S</span>
+        <span class="label">BACK</span>
+      </div>
+      <div class="key" data-action="right">
+        <span>D</span>
+        <span class="label">RIGHT</span>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
