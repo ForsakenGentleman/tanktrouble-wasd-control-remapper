@@ -15,10 +15,7 @@ function updateKeybindsExt(keybinds) {
     (playerId) => inputs._playerIdInputSetId[playerId] === "WASDKeys"
   );
 
-  if (targetId) {
-    inputs._releaseInput;
-    inputs.addInputManager(targetId, "WASDKeys");
-  }
+  if (targetId) inputs.addInputManager(targetId, "WASDKeys");
 }
 window.updateKeybindsExt = updateKeybindsExt;
 
@@ -34,3 +31,4 @@ window.addEventListener("message", function (event) {
   const keybinds = event.data.keybinds;
   if (window.Inputs && window.updateKeybindsExt) updateKeybindsExt(keybinds);
 });
+
