@@ -7,7 +7,7 @@
 ### **How to use it?**
 
 1.  Download and unpack the extension.
-2. Click on the extension in the *Extensions* menu.
+2. Click on the extension icon in the *Extensions* menu (as seen in the image below).
 3. This will open a popup window where you can remap keys.
 4. Click a UI key to select it (it will change colour), then press the keyboard key you want to map it to.
 5. That’s it. The setting will be saved even if you close your browser.
@@ -22,3 +22,4 @@ Tutorial on how to install the extension for Edge and Opera: [**Watch this**](ht
 
 ### **Credits**
 Keyboard buttons created by littleicon - Flaticon: [**Flaticon**](https://www.flaticon.com/packs/keyboard-button-17942534)
+
